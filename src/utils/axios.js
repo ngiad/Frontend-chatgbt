@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const Requestbase = axios.create({
-    baseURL : "http://localhost:5000/"
+    baseURL : "https://backend-chatgbt.onrender.com/"
 })
 
 export default Requestbase
