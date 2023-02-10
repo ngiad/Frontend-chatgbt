@@ -40,10 +40,6 @@ const Login = () => {
 
     const { username, password } = form
 
-    if(form.name){
-      return toast.warning("Not registered successfully")
-    }
-
     if(!username || !password || username.length < 6 || password.length < 6){
       return toast.warning("Not enough information has been entered")
     }
@@ -59,6 +55,30 @@ const Login = () => {
       toast.warn("happened !!")
     }
 
+  }
+
+  const handleregister = async (e) => {
+    e.preventDefault()
+
+    const { username, password,name } = form
+
+    console.log(form);
+    try {
+      if(!form.name){
+        return toast.warning("Not registered successfully")
+      }
+  
+      if(!username || !password || username.length < 6 || password.length < 6){
+        return toast.warning("Not enough information has been entered")
+      }
+
+      const res = await Requestbase.post("api/user/register",{username, password,name})
+      Dispatch(update(res.data)) 
+      localStorage.setItem("User",JSON.stringify(res.data.token))
+      Navigate("/chat")
+    } catch (error) {
+      toast.warn("happened !!")
+    }
   }
 
   const Navigate = useNavigate();
@@ -95,7 +115,7 @@ const Login = () => {
         </div>
 
         <div class="register">
-          <form class="form">
+          <form class="form" onSubmit={handleregister}>
             <label for="chk" aria-hidden="true">
               Register
             </label>
