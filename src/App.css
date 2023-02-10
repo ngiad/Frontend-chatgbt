@@ -1,38 +1,28 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Headland+One&family=Inter&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+  --font-1: "Headland One", serif;
+  --font-2: "Inter", sans-serif;
+  --font-3: "Roboto", sans-serif;
+  --color-tim: #d9afd9;
+  --color-blue: #97d9e1;
+  --color-blue-dam: #21d4fd;
+  --color-tim-dam: #b721ff;
+  --ts-color-body: #222f3e;
+  --ts-color-heading: #222f3e;
+  --ts-color-link: #576574;
+  --ts-color-background: #fff;
+  --ts-color-border: #999;
+  --ts-font-family-serif: -apple-system, BlinkMacSystemFont, sans-serif;
+  --ts-font-family-sans: "Manrope", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --ts-font-weight-regular: 400;
+  --ts-font-weight-bold: 700;
+  --ts-font-size-xxlarge: 1.8em;
 }

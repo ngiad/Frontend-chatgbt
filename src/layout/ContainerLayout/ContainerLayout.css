@@ -1,0 +1,19 @@
+.ContainerLayout{
+    position: relative;
+    display: flex;
+}
+
+.NavMenu-container{
+    position: sticky;
+    min-height: 100vh;
+    flex: 1;
+}
+
+.test{
+    flex: 8;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+

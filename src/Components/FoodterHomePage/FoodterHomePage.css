@@ -1,0 +1,19 @@
+.FoodterHomePage{
+    padding: 180px 20px 200px;
+    background-color: #F7F8FD;
+    font-family: var(--font-2);
+    text-align: center;
+}
+
+.FoodterHomePage h2{
+    margin: 20px 0;
+}
+
+.author{
+    font-family: var(--font-3);
+    opacity: 0.8;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+}

@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import ContainerLayout from './layout/ContainerLayout';
+import HomePageLayout from './layout/HomePageLayout';
+import Donate from './pages/Dontate';
+import ErrorPage from './pages/ErrorPage';
+import HomePage from './pages/HomePage';
+import Login from './pages/Login';
+import NotFound from './pages/NotFound';
+import PageChat from './pages/PageChat';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePageLayout />}>
+        <Route index element={<HomePage />} />
+      </Route>
+      <Route path='/chat' element={<ContainerLayout />}>
+        <Route index element={<PageChat />} />
+      </Route>
+      <Route path='donateme' element={<Donate />}/>
+      <Route path='signin' element={<Login />}/>
+      <Route path='error' element={<ErrorPage />}/>
+      <Route path='*' element={<NotFound />} />
+    </Routes>
   );
 }
 
