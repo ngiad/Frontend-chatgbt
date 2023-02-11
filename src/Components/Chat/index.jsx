@@ -29,6 +29,7 @@ const Chat = () => {
     setLoading(true);
 
     const meChat = { ...ask, prompt: [ask.prompt] };
+    setListChat((prev) => (prev = [...prev, meChat]));
 
     try {
       if (!ask) return;
@@ -38,7 +39,7 @@ const Chat = () => {
       data.prompt = data.prompt.split("\n");
       delete data.success;
 
-      setListChat((prev) => (prev = [...prev, meChat, data]));
+      setListChat((prev) => (prev = [...prev, data]));
       setAsk({
         name: "",
         prompt: "",
