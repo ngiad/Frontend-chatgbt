@@ -45,7 +45,7 @@ const Chat = () => {
         prompt: "",
       });
     } catch (error) {
-      Navigate("/error");
+      if(error) Navigate("/error");
     } finally {
       setLoading(false);
     }

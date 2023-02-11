@@ -62,7 +62,6 @@ const Login = () => {
 
     const { username, password,name } = form
 
-    console.log(form);
     try {
       if(!form.name){
         return toast.warning("Not registered successfully")
