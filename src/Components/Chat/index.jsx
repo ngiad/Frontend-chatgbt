@@ -12,7 +12,7 @@ const Chat = () => {
     prompt: "",
   });
   const [listChat, setListChat] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     if (loading) return;
@@ -32,7 +32,7 @@ const Chat = () => {
     setListChat((prev) => (prev = [...prev, meChat]));
 
     try {
-      if (!ask) return;
+      if (!ask.prompt) return;
       const res = await Requestbase.post("chat", ask);
       const data = await res.data;
 
